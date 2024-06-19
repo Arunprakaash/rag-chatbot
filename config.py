@@ -1,0 +1,4 @@
+OPENAI_MODEL = "gpt-4o"
+MAX_TOKENS = 225
+TEMPERATURE = 0
+OPENAI_EMBEDDING_MODEL = "text-embedding-ada-002"
