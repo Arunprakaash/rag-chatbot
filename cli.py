@@ -13,9 +13,9 @@ load_dotenv()
 
 def get_pinecone_client():
     try:
-        pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-        spe = ServerlessSpec(cloud=os.getenv("PINECONE_CLOUD"), region=os.getenv("PINECONE_REGION"))
-        index = os.getenv("PINECONE_INDEX_NAME")
+        pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
+        spe = ServerlessSpec(cloud=os.environ["PINECONE_CLOUD"], region=os.environ["PINECONE_REGION"])
+        index = os.environ["PINECONE_INDEX_NAME"]
     except KeyError as e:
         raise KeyError(f"Environment variable {e.args[0]} not set") from None
     return pc, spe, index
@@ -23,7 +23,7 @@ def get_pinecone_client():
 
 def get_openai_client():
     try:
-        openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
     except KeyError as e:
         raise KeyError(f"Environment variable {e.args[0]} not set") from None
     return openai_client
