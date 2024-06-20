@@ -38,8 +38,6 @@ The Chainlit app can be used to interact with the chatbot. Here's how you can us
 chainlit run app.py
 ```
 
-### Demo
-![demo gif of user interacting with the chatbot](imgs/demo.gif)
 
 ### Project Explanation
 This project is a Python-based application that leverages the OpenAI and Pinecone APIs to create a chatbot with context-aware capabilities. 
